@@ -10,7 +10,7 @@ select 'The album Nevermind is classified as:' as 'Info';
 select genre from albums where name = 'Nevermind';
 
 select 'These albums were released in the 1990s:' as 'Info';
-select * from albums where release_date >= 1990 && release_date <= 1999;
+select * from albums where release_date BETWEEN 1990 and 1999;
 
 select 'These are the Rock albums:' as 'Info';
 select * from albums where genre = 'Rock';

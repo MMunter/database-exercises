@@ -6,12 +6,15 @@ order by last_name, first_name ASC;
 
 select * from employees where (first_name = 'Irena' or first_name = 'Vidya' OR  first_name = 'Maya') and gender = 'M';
 
+# last name starts with E
 select * from employees where last_name like 'E%'
 order by emp_no DESC ;
 
+# last name starts with E or ends with E
 select * from employees where last_name like '%E' or last_name like 'E%'
 order by emp_no DESC ;
 
+# last name starts with E AND ends with E
 select * from employees where last_name like '%E' and last_name like 'E%'
 # can also use last_name like 'E%E'
 order by emp_no DESC ;

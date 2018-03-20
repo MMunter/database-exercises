@@ -1,7 +1,7 @@
 use employees;
 
 # last name starts with E AND ends with E
-select concat(first_name,  ' ', last_name) from employees where last_name like '%E' and last_name like 'E%'
+select concat(first_name,  ' ', last_name) from employees where last_name like '%E' and last_name like 'E%';
 # can also use last_name like 'E%E'
 # order by emp_no DESC
 

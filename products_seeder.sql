@@ -1,4 +1,5 @@
 use bonus_db;
+truncate products;
 insert into products(name, price, isSold)
 VALUES ('bike', 250.00, true),
       ('cat', 100.00, FALSE),

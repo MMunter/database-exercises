@@ -13,3 +13,4 @@ select price from products where name = 'dog';
 
 select 'Sold status for all products over 199' as 'Info';
 select isSold from products where price > 199;
+

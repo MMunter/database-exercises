@@ -12,5 +12,5 @@ where last_name like '%q%' AND
 GROUP BY last_name
 order by count(*);
 
-select count(*), gender from employees where first_name in ('Irena', 'Vidya', 'Maya')
+select count(gender), gender from employees where first_name in ('Irena', 'Vidya', 'Maya')
 GROUP BY gender;

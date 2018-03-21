@@ -27,12 +27,10 @@ from titles as t
   on e.emp_no = t.emp_no
   join dept_emp as de
   on de.emp_no = t.emp_no
-  join departments as d
-  on de.dept_no = d.dept_no
 where t.to_date like '9999-01-01' and de.dept_no = 'd009' and de.to_date like '9999-01-01'
 group by title;
 
-#5-find current salary of all current managers
+#5-find current salary of all current managers and department name
 select d.dept_name as 'Department Name', concat(e.first_name, ' ', e.last_name) as 'Name', s.salary as 'Salary'
 from departments as d
 join dept_manager as dm

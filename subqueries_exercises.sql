@@ -1,7 +1,7 @@
 use employees;
 
 #1-Find all employees with same hire_date as emp_no 101010
-select *
+select first_name, last_name, hire_date
 from employees
 where hire_date in(select hire_date
                    from employees
@@ -26,4 +26,15 @@ SELECT dept_name
 from departments
 where dept_no in (select dept_no
                   from dept_manager
-                  where gender = 'F' and to_date > curdate());
+                  join employees as e
+                  on e.emp_no = dept_manager.emp_no
+                  where e.gender = 'F' and dept_manager.to_date > curdate());
+
+# BONUS - #2
+select first_name, last_name
+from employees
+join salaries as s
+on s.emp_no = employees.emp_no
+where salary in (select max(salary) from salaries);
+
+
